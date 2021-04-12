@@ -21,24 +21,20 @@ Assuming we are in the directory of the project.
 	terminal> make run
 - Clearing object files and simuated .txt file
 	terminal> make clean
-
 - Running with default values will run a total of 8 trace file simultaneously
 with a dedicated thread for each file.
 - The verbose flag is turned ON by default. This will print all the details of
 the operations performed. It will print the buffer if the size is less than 100.
 - The simulated eeprom .txt file will have new line for each page. This is meant for
 the simplicity of the manual check if required.
-
 - The code can also be executed with custom parameters for any specific trace file.
 Command line flags include	-p defining page size in bytes
 				-n total number of pages
 				-t path of trace file
 				-v verbose flag
-
 - The following command will create eeprom with 512 pages with 16 bytes each
 and run only the read_small trace file while printing all the details.
 terminal> ./main -p 16 -n 512 -v 1 -t traces/read_small.trace
-
 - Failing to specifiy any parameter in comman line options, will assume the default
 value for the parameter.
 

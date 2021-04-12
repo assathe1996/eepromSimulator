@@ -29,7 +29,7 @@ the operations performed. It will print the buffer if the size is less than 100.
 - The simulated eeprom .txt file will have new line for each page. This is meant for
 the simplicity of the manual check if required.
 
-T- he code can also be executed with custom parameters for any specific trace file.
+- The code can also be executed with custom parameters for any specific trace file.
 Command line flags include	-p defining page size in bytes
 				-n total number of pages
 				-t path of trace file

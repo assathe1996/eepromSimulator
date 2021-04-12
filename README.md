@@ -5,41 +5,41 @@ EEPROM is of 64Kb with 8192 words of 8 bits.
 The memory has 32 bytes page access. There are total 256 pages.
 
 There are 2 API functions.
-void eeprom_read(uint32_t offset, int size, char *buf)
-void eeprom_write(uint32_t offset, int size, char *buf);
+- void eeprom_read(uint32_t offset, int size, char *buf)
+- void eeprom_write(uint32_t offset, int size, char *buf);
 
 The offset is the total memory offset, size is buffer size that is
 to be read or written. *buf is the pointer to the start of the buffer.
-In read operation, data is read from eeprom and copied to buf.
-In write operation, data from buf is written to the eeprom.
+- In read operation, data is read from eeprom and copied to buf.
+- In write operation, data from buf is written to the eeprom.
 
 ## Compilation and Usage
 Assuming we are in the directory of the project.
-Compiling the code base.
+- Compiling the code base.
 	terminal> make
-Running for above specifications.
+- Running for above specifications.
 	terminal> make run
-Clearing object files and simuated .txt file
+- Clearing object files and simuated .txt file
 	terminal> make clean
 
-Running with default values will run a total of 8 trace file simultaneously
+- Running with default values will run a total of 8 trace file simultaneously
 with a dedicated thread for each file.
-The verbose flag is turned ON by default. This will print all the details of
+- The verbose flag is turned ON by default. This will print all the details of
 the operations performed. It will print the buffer if the size is less than 100.
-The simulated eeprom .txt file will have new line for each page. This is meant for
+- The simulated eeprom .txt file will have new line for each page. This is meant for
 the simplicity of the manual check if required.
 
-The code can also be executed with custom parameters for any specific trace file.
+T- he code can also be executed with custom parameters for any specific trace file.
 Command line flags include	-p defining page size in bytes
 				-n total number of pages
 				-t path of trace file
 				-v verbose flag
 
-The following command will create eeprom with 512 pages with 16 bytes each
+- The following command will create eeprom with 512 pages with 16 bytes each
 and run only the read_small trace file while printing all the details.
 terminal> ./main -p 16 -n 512 -v 1 -t traces/read_small.trace
 
-Failing to specifiy any parameter in comman line options, will assume the default
+- Failing to specifiy any parameter in comman line options, will assume the default
 value for the parameter.
 
 ## Trace files

@@ -44,21 +44,21 @@ value for the parameter.
 
 ## Trace files
 Testing is conducted on 8 trace files. Each file tests different aspect of the code.
-toy.trace - Tests a total of 20 read/write operations with memory offset less than 127
+- toy.trace - Tests a total of 20 read/write operations with memory offset less than 127
 			bytes and size less than 10 bytes.
-read_small.trace - Tests a total of 200 read operations with memory offset and size less 
+- read_small.trace - Tests a total of 200 read operations with memory offset and size less 
 			than 127 bytes.
-write_small.trace - Tests a total of 200 write operations with memory offset and size less 
+- write_small.trace - Tests a total of 200 write operations with memory offset and size less 
 			than 127 bytes.
-test_small.trace - Tests a total of 200 read/write operations with memory offset and size 
+- test_small.trace - Tests a total of 200 read/write operations with memory offset and size 
 			less than 127 bytes.
-read_big.trace - Tests a total of 200 read operations with memory offset and size upto
+- read_big.trace - Tests a total of 200 read operations with memory offset and size upto
 			8192 bytes.
-write_big.trace - Tests a total of 200 write operations with memory offset and size upto
+- write_big.trace - Tests a total of 200 write operations with memory offset and size upto
 			8192 bytes.
-test_big.trace - Tests a total of 200 read/write operations with memory offset and size 
+- test_big.trace - Tests a total of 200 read/write operations with memory offset and size 
 				upto 8192 bytes.
-edge.trace - Tests a total of 200 read/write operations with corner cases including memory
+- edge.trace - Tests a total of 200 read/write operations with corner cases including memory
 				offset out of bounds, memory offset in bounds but size exceed the remaining 
 				capacity of the memory ,size = 0, size less than page size, size less than page size
 				but operation spread across 2 pages.
